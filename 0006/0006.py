@@ -15,9 +15,10 @@ def count_alp(filename=None,str1=None):
                 sumstr1 += num
         print(filename,'有',sumstr1,'个',str1,'字符。')
 
-count_alp('Eng.txt',"Python")
-
-
-
+if __name__ == "__main__":
+    filelist = os.listdir(os.getcwd())
+    for file in filelist:
+        if os.path.isfile(file):
+            count_alp(file,"Python")
 
 
